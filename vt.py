@@ -81,8 +81,6 @@ class VT:
             f = open(filepath, 'w+')
             f.write(json.dumps(init_conf))
             f.close()
-            print("Thank you for using virustotal <virustotal[AT]appsec[DOT]it>\n"
-                  "Contribute @ https://github.com/nu11p0inter/virustotal")
         return
 
     # set a new api-key
