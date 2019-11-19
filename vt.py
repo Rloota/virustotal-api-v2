@@ -96,7 +96,7 @@ class VT:
             f.write(json.dumps(conf))
             f.close()
         if not DISABLE_PRINTS:
-            print('Key was set to: {}...{}'.format(key[0:4], key[len(key)-4:]))
+            print('API key was set.')
         return
 
     # prints api-key
@@ -355,73 +355,72 @@ def main():
 
     if args.setkey is not None:
         vt.setkey(args.setkey)
-        return
 
-    elif args.getkey is not None:
+    if args.getkey is not None:
         vt.getkey()
         return
 
-    elif args.output is not None:
+    if args.output is not None:
         vt.out(args.output)
         return
 
-    elif args.getfile is not None:
+    if args.getfile is not None:
         vt.getfile(args.getfile)
         return
 
-    elif args.geturl is not None:
+    if args.geturl is not None:
         vt.geturl(args.geturl)
         return
 
-    elif args.getip is not None:
+    if args.getip is not None:
         vt.getip(args.getip)
         return
 
-    elif args.getdomain is not None:
+    if args.getdomain is not None:
         vt.getdomain(args.getdomain)
         return
 
-    elif args.scanfile is not None:
+    if args.scanfile is not None:
         vt.scanfile(args.scanfile)
         return
 
-    elif args.scanurl is not None:
+    if args.scanurl is not None:
         vt.scanurl(args.scanurl)
         return
 
-    elif args.urlfeed is not None:
+    if args.urlfeed is not None:
         #vt.urlfeed(args.urlfeed)
         if not DISABLE_PRINTS:
             print("Not implemented yet.")
         return -1
 
-    elif args.filesearch is not None:
+    if args.filesearch is not None:
         #vt.filesearch(args.filesearch)
         if not DISABLE_PRINTS:
             print("Not implemented yet.")
         return -1
 
-    elif args.download is not None:
+    if args.download is not None:
         #vt.download(args.download)
         if not DISABLE_PRINTS:
             print("Not implemented yet.")
         return -1
 
-    elif args.network is not None:
+    if args.network is not None:
         #vt.network(args.network)
         if not DISABLE_PRINTS:
             print("Not implemented yet.")
         return -1
 
-    elif args.rescan is not None:
+    if args.rescan is not None:
         vt.rescan(args.rescan)
         return
 
-    elif args.behaviour is not None:
+    if args.behaviour is not None:
         vt.behaviour(args.behaviour)
         return
 
-    elif args.comment is not None:
+    if args.comment is not None:
         vt.comment(args.comment[0], args.comment[1])
         return
 
